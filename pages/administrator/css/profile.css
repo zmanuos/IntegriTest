@@ -1,0 +1,120 @@
+.profile-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f4f7fb;
+    box-sizing: border-box;
+}
+
+.profile-content {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+.profile-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.profile-header div h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.profile-header div p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #777;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: #555;
+}
+
+.info-item span {
+    color: #333;
+    font-weight: 400;
+}
+
+.form-section {
+    margin-top: 40px;
+}
+
+.form-section h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-section .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+.form-section input {
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.form-section input:focus {
+    border-color: #7e5fc5;
+    outline: none;
+}
+
+.form-section .btn-container {
+    text-align: center;
+}
+
+.form-section button {
+    padding: 12px 30px;
+    background-color: #7e5fc5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: #70308C;
+}

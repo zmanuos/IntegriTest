@@ -1,0 +1,193 @@
+.mega-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 0;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 600px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    font-weight: 800;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+    background-color: white !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px;
+    max-width: 400px;
+    height: 300px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.form-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-item select {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.form-item select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    padding: 15px 30px;
+    background-color: #4a8c89;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    display: block; /* Centra el botón horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #3b7a7b;
+}
+
+.course-container {
+    background-color: #d0f3e1;
+    border-top: 5px solid #4b9b6f;
+}
+
+.course-container i {
+    color: #5a7d4f;
+}
+
+.teacher-container {
+    background-color: #f2f2f2;
+    border-top: 5px solid #3b589a;
+}
+
+.teacher-container i {
+    color: #4568a2;
+}
+
+.group-container {
+    background-color: #eaf6e7;
+    border-top: 5px solid #d14a2d;
+}
+
+.group-container i {
+    color: #b63d2a;
+}
+
+.mega-container i {
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.arrows {
+    font-size: 30px; /* Tamaño moderado para las flechas */
+    color: black; /* Color gris suave para un estilo minimalista */
+    margin: 0; /* Eliminar margen adicional */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Asegura que la flecha esté centrada */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+/* Estilo general para la notificación */
+.notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* Estilo para el mensaje de error */
+.notification.error {
+    background-color: #dc3545;
+
+}
+
+/* Estilo para el mensaje de éxito */
+.notification.success {
+    background-color: #28a745;
+}
+
+/* Mostrar la notificación con animación */
+.notification.show {
+    display: block;
+    opacity: 1;
+}
+
+@keyframes slideDown {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 50px 30px;
+    gap: 30px;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 360px;
+    height: 360px;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+    font-size: 65px;
+    margin-bottom: 25px;
+    color: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box h3 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.box p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.teacher {
+    background-color: #f2dede;
+    border-left: 8px solid #c0392b;
+    box-shadow: 0 5px 20px rgba(192, 57, 43, 0.1);
+}
+
+.teacher .icon {
+    background-color: #c0392b;
+}
+
+.student {
+    background-color: #fef4c4;
+    border-left: 8px solid #f39c12;
+    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.1);
+}
+
+.student .icon {
+    background-color: #f39c12;
+}
+
+.groups {
+    background-color: #d6eaf8;
+    border-left: 8px solid #2980b9;
+    box-shadow: 0 5px 20px rgba(41, 128, 185, 0.1);
+}
+
+.groups .icon {
+    background-color: #2980b9;
+}
+
+.highest {
+    background-color: #e8daef;
+    border-left: 8px solid #8e44ad;
+    box-shadow: 0 5px 20px rgba(142, 68, 173, 0.1);
+}
+
+.highest .icon {
+    background-color: #8e44ad;
+}
+
+#containers-title {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25pt;
+}
+
+#containers-title label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 550px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

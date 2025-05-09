@@ -1,0 +1,211 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8fbfd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* En dispositivos móviles, la imagen va arriba del formulario */
+.formulario {
+    display: flex;
+    width: 100%;
+    flex-direction: row; /* Por defecto en PC */
+}
+
+.imagen {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.imagen img {
+    max-width: 250px;
+    height: auto;
+}
+
+.formulario-contenido {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formulario-contenido h3 {
+    font-size: 25px;
+    color: #4A4A4A;
+    margin-bottom: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.formulario-contenido p.seguridad {
+    font-size: 16px;
+    color: #4A4A4A;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formulario-contenido label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container input[type="password"],
+.input-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Espacio para el icono */
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.input-container i {
+    position: absolute;
+    right: 10px; /* Alinea el icono hacia la derecha */
+    top: 68%;
+    transform: translateY(-50%); /* Centra el icono verticalmente */
+    font-size: 20px; /* Tamaño del icono */
+    color: #777; /* Color del ojo */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.input-container i:hover {
+    color: #333; /* Color más oscuro cuando el icono es hover */
+}
+
+.input-container i:active {
+    color: #555; /* Color ligeramente más oscuro cuando se hace clic */
+}
+
+.formulario-contenido input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #7e6fca;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulario-contenido input[type="submit"]:hover {
+    background-color: #6f5fac;
+}
+
+
+.notification {
+    position: fixed;
+    top: -50px; /* Comienza fuera de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    animation: slideDown 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -50px; /* Fuera de la pantalla en la parte superior */
+        opacity: 0;
+    }
+    to {
+        top: 20px; /* Posición final en la parte superior */
+        opacity: 1;
+    }
+}
+
+.notification.success {
+    background-color: #28a745;
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+/* Media Query para pantallas pequeñas como iPhone 11 */
+@media screen and (max-width: 828px) {
+    .contenedor {
+        padding: 15px; /* Reducir padding */
+        max-width: 80%; /* Reducir el ancho máximo en móviles */
+    }
+
+    /* En dispositivos móviles, colocar la imagen arriba */
+    .formulario {
+        flex-direction: column; /* Cambiar la dirección a columna */
+        align-items: center; /* Asegurarse de que el contenido esté centrado */
+    }
+
+    .imagen {
+        flex-basis: 100%; /* Tomar todo el espacio disponible */
+        padding-right: 0; /* Eliminar padding */
+        margin-bottom: 20px; /* Agregar espacio entre la imagen y el formulario */
+    }
+
+    .imagen img {
+        max-width: 180px; /* Hacer la imagen más pequeña en móviles */
+    }
+
+    .formulario-contenido {
+        flex-basis: 100%; /* Tomar todo el espacio disponible */
+        text-align: center; /* Centrar el contenido */
+    }
+
+    .formulario-contenido h3 {
+        font-size: 20px; /* Reducir el tamaño del título */
+    }
+
+    .formulario-contenido p.seguridad {
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+
+    .formulario-contenido label {
+        font-size: 14px; /* Reducir tamaño de las etiquetas */
+    }
+
+    .input-container input[type="password"],
+    .input-container input[type="text"] {
+        font-size: 14px; /* Reducir tamaño de fuente */
+        padding: 8px; /* Reducir padding */
+    }
+
+    .formulario-contenido input[type="submit"] {
+        font-size: 14px; /* Reducir tamaño del botón */
+        padding: 10px; /* Reducir padding */
+    }
+}

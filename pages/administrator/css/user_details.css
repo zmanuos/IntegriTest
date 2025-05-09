@@ -1,0 +1,264 @@
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    width: 95%;
+    max-width: 1200px; /* Limitar el ancho máximo para que no se estire demasiado en pantallas grandes */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos internos se ajusten en pantallas pequeñas */
+}
+
+.user_container {
+    flex: 1 1 22%; /* Flexibilidad con un ancho base de 22% */
+}
+
+.user_photo {
+    height: 240px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DDD;
+    border-radius: 8px; /* Redondear bordes */
+    background-color: #f0f0f0; /* Color de fondo para el contenedor de la foto */
+}
+
+.url {
+    margin-top: 20px;
+    
+}
+
+.user_photo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; /* Asegura que la imagen ocupe todo el espacio del contenedor */
+    border-radius: 8px;
+}
+
+.user_info {
+    flex: 3 1 70%; /* Flexibilidad con un ancho base de 70% */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+
+
+h2 {
+    text-align: center;
+}
+
+.container label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    font-size: 10pt;
+}
+
+input[type="text"], input[type="date"], input[type="file"], select {
+    width: 100%;
+    padding: 8px;
+    font-size: 9pt;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container button {
+    width: 20%;
+    padding: 12px;
+    background-color: #7e5fc5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.actions button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #45a049;
+}
+
+/* TABLE */
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.student th {
+    background-color: #7e5fc5;
+    color: white;
+    font-weight: bold;
+}
+
+.teacher th {
+    background-color: #4a67a5;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1e6f0;
+}
+
+
+/* SEARCH */
+.search {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.search form {
+    display: flex;
+    float: left;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 300px;
+    margin: 15px auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search input[type="text"] {
+    flex: 1;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.search input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search button {
+    padding: 6px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.student .search button {
+    background-color: #7e5fc5;
+}
+
+.teacher .search button {
+    background-color: #4a67a5;
+}
+
+.search button:hover {
+    background-color: #b819bb;
+}
+
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 20px auto;
+    
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+}
+.student .pagination a.active {
+    background-color: #7e5fc5;
+    color: white;
+}
+
+.teacher .pagination a.active {
+    background-color: #4a67a5;
+    color: white;
+}
+
+.pagination a:hover:not(.active){
+    background-color: gray;
+}
+
+
+
+

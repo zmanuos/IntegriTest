@@ -1,0 +1,16 @@
+:root {
+    --background: #F5F5F5;
+    --headerBackground: #1E2D3D;
+    --menuBackground: #212121;
+    --menuItemBackground: #424242;
+    --menuItemBackgroundHover: #00796B;
+    --menuItemBorder: #000000;
+    --menuItemText: #ECF0F1;
+    --menuItemIconBackground: #16A085;
+    --menuItemIconHover: #1ABC9C;
+    --menuItemIcon: #ECF0F1;
+    --menuItemLabelHover: #212121;
+    --iconLight: #BDC3C7;
+    --iconLightHover: #ECF0F1;
+    --subItemBackground: #424242  ;
+}

@@ -1,0 +1,410 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.mega-container {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 40px;
+    background-color: #f9f9f9;
+    max-width: 1680px;
+}
+
+.form-wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 30%;
+    border: none;
+}
+
+.form-wrapper h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color: #d84e4e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #d84e4e;
+}
+
+.courses-container {
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    height: 650px;
+    overflow-y: auto;
+}
+
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header, .table-row {
+    display: block;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    height: 50px;
+}
+
+.table-cell {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.table-cell a {
+    color: #d84e4e;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.table-cell a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.btn-load-more {
+    background-color: #d84e4e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.btn-load-more:hover {
+    background-color: #e74c3c;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 180px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 6px;
+    font-family: montserrat;
+}
+
+.modal-content h3 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 20pt;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+.gestion-cursos {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.courses-table .table-cell {
+    text-align: left;
+    padding: 12px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.courses-table .table-cell:nth-child(1), 
+.courses-table .table-cell:nth-child(5) {
+    width: 100px; 
+}
+
+.courses-table .table-cell:nth-child(3) { 
+    width: 350px; 
+}
+
+.courses-table .table-cell:nth-child(6) {
+    width: 120px;
+}
+
+.courses-table .table-cell:nth-child(4) {
+    width: 150px;  
+    padding-left: 20px;
+}
+
+.table-header {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-submit, .btn-load-more {
+    background-color: #d84e4e;
+    border-radius: 4px;
+    padding: 12px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover, .btn-load-more:hover {
+    background-color: #e74c3c;
+}
+
+.courses-container {
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+}
+
+.title {
+    display: flex;
+    margin: 30px 0;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 550px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    font-weight: 800;
+    font-size: 15px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: right;
+}
+
+.search-item {
+    display: inline-block;
+}
+
+.search-input {
+    width: 150px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-btn {
+    background-color: #d84e4e;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-btn:hover{
+    background-color: #e74c3c;
+}
+
+.search-btn i {
+    font-size: 18px;
+}
+
+.courses-table .table-header, .table-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #d84e4e;
+    color: white;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #e74c3c;
+}
+
+.btn-prev, .btn-next {
+    background-color: #d84e4e;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    background-color: #e74c3c;
+}
+
+.search-bar h2 {
+    position: absolute;
+    font-size: 22pt;
+    left: 30px;
+}
+
+.edit-btn {
+    color: red;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.btn-summit-c {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+.notification.hidden {
+    top: -100px;
+}
+
+.notification.visible {
+    top: 20px;
+}
+
+.container-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#b-message{
+    width: 1000px;
+}
+
+
+/* Estilo para las celdas de 'Nombre' y 'Tema' */
+.table-cell:nth-child(1) {
+    max-width: 40px;
+}
+
+.table-cell:nth-child(2) {
+    min-width: 250px;
+}
+
+.table-cell:nth-child(3) {
+    min-width: 300px;
+}
+
+.table-cell:nth-child(4) {
+    min-width: 100px;
+}
+
+.no-results{
+    min-width: 1400px;
+}

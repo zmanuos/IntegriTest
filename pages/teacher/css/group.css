@@ -1,0 +1,79 @@
+.groups, .courses {
+    display: flex;
+    position: relative;
+    margin-left: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(350px, 1fr));
+    gap: 4rem;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.group-card, .course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.group-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    padding: 16px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card-body {
+    padding: 16px;
+    height: 6.25rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    padding: 0.5rem;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.groups .card-footer {
+    justify-content: space-around;
+}
+
+.card-footer i {
+    font-size: 15pt;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .groups {
+        margin-left: 1rem;
+    }
+}

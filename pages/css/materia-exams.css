@@ -1,0 +1,323 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    height: inherit;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.label-grupo {
+    color: #FFF;
+    padding: 60px;
+    font-size: 24pt;
+}
+
+#materia-todo {
+    margin: auto;
+    margin-top: 20px;
+    width: 69%;
+    box-shadow: 0px 0px 10px rgba(10, 1, 1, 0.3);
+    border-radius: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#materia, #materia2, #examen {
+    width: 75%;
+    border-radius: 20px;
+    margin-left: 3%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    margin-top: 30px;
+}
+
+#materia {
+    height: 250px;
+}
+
+#materia2 {
+    height: 130px;
+}
+
+#examen {
+    height: 250px;
+    font-size: 50pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    overflow: hidden;
+}
+
+.materia-name {
+    padding: 10px;
+    height: 110px;
+    display: flex;
+    color: #FFF;
+    padding-left: 40px;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 22pt; 
+    overflow: hidden;
+}
+
+.descripcion {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.02);
+    font-size: 14pt;
+    align-items: self-start;
+    overflow: hidden;
+}
+
+.docente-name {
+    padding: 10px;
+    padding-left: 15px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 14pt;
+    padding-left: 30px;
+    overflow: hidden;
+}
+
+.exam {
+    margin: auto;
+    width: 86%;
+    height: 90px;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 15px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.exam:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.exam:active {
+    box-shadow: inset 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.995);
+}
+
+.exam-tarde {
+    margin: auto;
+    width: 86%;
+    height: 90px;
+    margin-top: 30px;
+    background-color: rgb(191, 191, 191);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 15px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.exam-estado, .exam-calificacion, .exam-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    overflow: hidden;
+}
+
+.exam-estado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    width: 22%;
+}
+
+.exam-icon {
+    height: 65px;
+    width: 7.5%;
+    border-radius: 70px;
+    background-color: rgb(50, 50, 50);
+    color: #FFF;
+    font-size: 24pt;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.exam-titulo {
+    height: 100%;
+    width: 61.5%;
+    font-size: 22pt;
+    display: flex;
+    padding-left: 25px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.exam-aprobado, .exam-reprobado, .exam-no-realizado {
+    height: 65px;
+    width: 7.5%;
+    border-radius: 70px;
+    background-color: rgb(50, 50, 50);
+    color: #FFF;
+    font-size: 18pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exam-aprobado {
+    background-color: rgb(41, 130, 66);
+}
+
+.exam-reprobado {
+    background-color: rgb(138, 52, 52);
+}
+
+.exam-no-realizado {
+    background-color: rgb(50, 50, 50);
+}
+
+#no-hay {
+    font-size: 26px;
+    display: block;
+}
+
+#boton {
+    display: block;
+    border-radius: 20px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    margin: auto;
+    width: 250px;
+    height: 60px;
+    color: #fff;
+    font-size: 18pt;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, rgb(117, 68, 174), rgb(153, 102, 204));
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#boton:hover {
+    background: linear-gradient(135deg, rgb(102, 58, 180), rgb(122, 73, 204));
+    box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+#boton:active {
+    background: linear-gradient(135deg, rgb(85, 50, 150), rgb(110, 65, 180));
+    box-shadow: inset 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.98);
+}
+
+.exam-bgc {
+    background-color: rgb(107, 38, 138);
+}
+
+@media screen and (max-width: 475px) {
+    .label-grupo {
+        padding: 20px;
+        font-size: 25pt;
+        width: 100%;
+    }
+    .materia {
+        height: 100px !important;
+    }
+
+    #materia-todo {
+        width: 95%;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        font-family: montserrat;
+    }
+
+    #materia, #materia2, #examen {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .materia-name {
+        font-size: 16pt;
+        height: 40%;
+    }
+
+    .descripcion {
+        font-size: 10pt; 
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .docente-name {
+        font-size: 12pt; 
+        padding-left: 15px;
+    }
+
+    .exam {
+        width: 90%;
+        height: 70px;
+        margin-top: 20px;
+    }
+
+    .exam-tarde {
+        width: 90%;
+        height: 70px;
+        margin-top: 20px;
+    }
+
+    .exam-titulo {
+        font-size: 10pt ; 
+        padding: 10px !important;
+        margin: 0px !important;
+        width: 45%;
+    }
+
+    #boton {
+        width: 200px;
+        height: 50px;
+        font-size: 16pt; 
+    }
+    .exam-estado {
+        font-size: 9pt;
+        margin: 10px;
+        
+    }
+
+    .exam-no-realizado,
+    .exam-aprobado {
+        width: 30%;
+
+        height: 100%;
+
+    }
+}

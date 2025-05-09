@@ -1,0 +1,15 @@
+:root {
+      /* logo Genius */
+    --genius-primary: #6f5fac;
+    --genius-secondary: #F2E641;
+    --genius-accent1: #F2D541;
+    --genius-accent2: #F28B30;
+    --genius-dark: #0D0D0D;
+
+    /* Colores para el logo del sombrero  */
+    --sombrero-primary: #70308C;
+    --sombrero-secondary: #7e5fc5;
+    --sombrero-accent1: #4E5BA6;
+    --sombrero-accent2: #F2CD5E;
+    --sombrero-dark: #0D0D0D;
+}

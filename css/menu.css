@@ -1,0 +1,97 @@
+#menu {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    background: var(--menuBackground);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translate(-100%);
+    transition: transform 0.15s ease;
+    float: left;
+    z-index: 1000;
+}
+
+#menu.visible {
+    transform: translateX(0);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-item {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: var(--menuItemBackground);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid var(--menuItemBorder);
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.menu-item:hover {
+    background: var(--menuItemBackgroundHover);
+    cursor: pointer;
+}
+
+.menu-item-icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: var(--menuItemIconBackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item-icon i {
+    font-size: 18pt;
+    color: var(--menuItemIcon);
+}
+
+.menu-item-icon:hover {
+    background-color: var(--menuItemIconHover);
+}
+
+.menu-item label {
+    font-size: 13pt;
+    color: var(--menuItemText);
+    transition: color 0.3s ease;
+}
+
+.menu-item label:hover {
+    cursor: pointer;
+    color: var(--menuItemLabelHover);
+}
+
+.sub-menu {
+    padding-right: 0;
+    background: var(--subItemBackground);
+    display: block;
+    width: 96%;
+    margin-top: 0;
+    margin-left: 4%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.sub-menu-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--menuItemBorder);
+    transition: background 0.3s ease;
+    cursor: pointer;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: var(--menuItemText);
+    font-size: 12pt;
+}
+
+.sub-menu-item:hover {
+    background: var(--menuItemBackgroundHover);
+}

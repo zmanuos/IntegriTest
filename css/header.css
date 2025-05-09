@@ -1,0 +1,101 @@
+
+header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background: #000;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content:end;
+    flex-direction: row-reverse;
+    
+}
+
+#header-right {
+    position: relative;
+    display: flex;
+    width: 95%;
+    height: 50px;
+    padding: 0px;
+    justify-content: end;
+}
+
+#header-left, 
+#header-right {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: white;
+}
+
+#header-right i {
+    font-size: 18px;
+    margin: 5px;
+}
+
+#header-right i:hover {
+    color: #ccc;
+    cursor: pointer;
+}
+
+#header-menu {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#header-menu i {
+    font-size: 24px;
+    color: white;
+}
+
+#header-menu i:hover {
+    color: darkgray;
+}
+
+#header-logo a {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none ;
+
+}
+
+#header-logo img {
+    height: 50px;
+    width: auto;
+}
+
+#header-right img {
+    height: 40px;
+    cursor: pointer;
+}
+
+button[name='logout'] {
+    border: none;
+    color: white;
+    background: black;
+}
+
+#header-right {
+    position: relative;
+    display: flex;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    height: 50px;
+    padding: 0px;
+    justify-content: flex-end; /* Alinea el contenido hacia la derecha */
+}
+
+#header-right img {
+    height: 35px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 0px; /* Espaciado a la derecha */
+}

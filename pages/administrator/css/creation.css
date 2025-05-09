@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat;
+    background-color: #f4f4f9;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+#containers-title {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25pt;
+}
+
+#containers-title label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 550px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 500px;
+    height: 350px;
+    padding: 65px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #f4b942; /* Color verde suave */
+}
+
+.box h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #f4b942; /* Amarillo dorado suave */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f39c12; /* Amarillo más intenso */
+}
+
+.teacher {
+    border-left: 5px solid #e74c3c; /* Azul suave */
+}
+
+.teacher .btn {
+    background: #c55f5f;
+}
+
+.teacher .icon {
+    color: #c55f5f;
+}
+
+.teacher .btn:hover {
+    background: #c0392b; /* Azul más profundo */
+}
+
+.student {
+    border-left: 5px solid #f4b942; /* Amarillo dorado suave */
+}
+
+.administrator {
+    border-left: 5px solid #4caf50; /* Naranja cálido */
+}
+
+.administrator .icon {
+    color: #6abf8d;
+}
+
+.administrator .btn {
+    background: #6abf8d;
+}
+
+.administrator .btn:hover {
+    background: #4caf50; /* Naranja más oscuro */
+}
+
+

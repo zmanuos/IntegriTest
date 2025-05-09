@@ -1,0 +1,59 @@
+/* General */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent; /* Cambia el fondo a transparente */
+}
+
+/* Contenedor de los fuegos artificiales */
+#fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Los fuegos no interactúan con el usuario */
+    z-index: 9999;
+    background-color: transparent; /* Fondo transparente para el contenedor */
+}
+
+/* Estilo base de los fuegos artificiales (líneas) */
+.firework {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: var(--firework-color);
+    transform-origin: 50% 100%; /* El punto de origen de la animación está en la parte inferior central */
+    animation: explode 1s ease-out forwards, randomMovement 2s ease-in-out forwards;
+}
+
+/* Animación de explosión radial */
+@keyframes explode {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(20) rotate(360deg); /* Expande y rota */
+        opacity: 0;
+    }
+}
+
+/* Movimiento aleatorio (las líneas explotan en direcciones aleatorias) */
+@keyframes randomMovement {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(var(--random-rotation));
+        opacity: 0;
+    }
+}
+
+/* Colores dinámicos de los fuegos artificiales */
+.firework {
+    background-color: var(--firework-color);
+}
